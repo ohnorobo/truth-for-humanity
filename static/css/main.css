@@ -1,3 +1,23 @@
+.t1{
+	color:sienna; 
+	background-color:yellow;
+	font-size:24px;
+}
+.t2{
+	color:red; 
+	background-color:green;
+	font-size:32px;
+}
+
+
+.t3{
+	color:orange; 
+	background-color:cyan;
+	text-decoration:italic;
+}
+
+
+
 
 .clearfix {
 }

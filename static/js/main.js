@@ -4,17 +4,36 @@ $( document ).ready(function() {
 	var str = $( "body" ).text();
 
 	var words = str.split(" ");
-	var count=words.length;
-
+	var wordcount=words.length;
 	console.log(words.length);
-	var randomNum = Math.ceil(Math.random()*count); 
-
-
-	var searchString=words[randomNum];
-	//str=str.replace(searchString,"<span style='backgrond-color:red'>"+searchString+"</span>");
-	str=str.replace(searchString,"<span style='color:sienna;background-color:yellow;font-size:40px;'>"+searchString+"</span>");
 	
-	$( "body:last" ).html( str );
+	var sentences = str.split(".");
+	var sentencecount=sentences.length;
+	
+	for(var i=0; i<10; i++)
+	{	
+		var randomNum = Math.ceil(Math.random()*sentencecount); 
+		var searchString=sentences[randomNum];
+		str=str.replace(searchString,"<span class='t1'>"+searchString+"</span>");	
+	}
+
+	for(var i=0; i<10; i++)
+	{	
+		var randomNum = Math.ceil(Math.random()*wordcount); 
+		var searchString=words[randomNum];
+		str=str.replace(searchString,"<span class='t2'>"+searchString+"</span>");
+	}
+
+
+	for(var i=0; i<20; i++)
+	{	
+		var randomNum = Math.ceil(Math.random()*wordcount); 
+		var searchString=words[randomNum];
+		str=str.replace(searchString,"<span class='t3'>"+searchString+"</span>");
+	}
+
+
+	//$( "body:last" ).html( str );
 
 });
 
