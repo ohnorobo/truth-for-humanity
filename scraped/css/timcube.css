@@ -1,0 +1,40 @@
+p, li, div {
+  color:black;
+  font-family:'Times New Roman';
+  font-size:12pt;
+  margin:0 0 0.0001pt;
+}
+a:link, span {
+  color:#53813C;
+  text-decoration:underline;
+}
+a:visited, span {
+  color:#FF191C;
+  text-decoration:underline;
+}
+p, li, div {
+  background-color:navy;
+  background-position:initial initial;
+  background-repeat:initial initial;
+  color:black;
+  font-family:Tahoma;
+  font-size:10pt;
+  margin:0 0 0.0001pt;
+}
+p {
+  color:black;
+  font-family:'Times New Roman';
+  font-size:12pt;
+  margin-left:0;
+  margin-right:0;
+}
+
+div {
+  page:Section1;
+}
+ol {
+  margin-bottom:0;
+}
+ul {
+  margin-bottom:0;
+}

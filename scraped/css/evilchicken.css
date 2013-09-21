@@ -1,0 +1,86 @@
+BODY {
+    background-color: rgba(0, 0, 0, 0);
+    background-image: url("images/bg.jpg");
+    background-position: left center;
+    background-repeat: repeat-y;
+    border-color: -moz-use-text-color;
+    border-style: none;
+    border-width: medium;
+    color: #FFFFFF;
+    font: medium Verdana,Arial,Helvetica,sans-serif;
+    margin: 0;
+    padding: 0;
+}
+H1 {
+    font-family: Verdana,Arial,Helvetica,sans-serif;
+    font-weight: normal;
+}
+H2 {
+    font-family: Verdana,Arial,Helvetica,sans-serif;
+    font-weight: normal;
+}
+H3 {
+    font-family: Verdana,Arial,Helvetica,sans-serif;
+    font-weight: normal;
+}
+H4 {
+    font-family: Verdana,Arial,Helvetica,sans-serif;
+    font-weight: normal;
+}
+H1 {
+    font-size: 150%;
+}
+H2 {
+    font-size: 135%;
+    margin-bottom: 6pt;
+}
+H3 {
+    font-size: 110%;
+    font-weight: bold;
+    margin-bottom: 6pt;
+}
+H4 {
+    font-size: 100%;
+    font-weight: bold;
+    margin-top: 1.5em;
+}
+.LEVEL1 {
+    color: #FFFFFF;
+    font-size: 7.5pt;
+    font-weight: bold;
+    line-height: 10pt;
+    text-decoration: none;
+}
+.LEVEL1a {
+    color: #FFFFFF;
+    font-size: 7.5pt;
+    font-weight: bold;
+    line-height: 10pt;
+    text-decoration: none;
+}
+.LEVEL2 {
+    color: #FFFFFF;
+    font-size: 7.5pt;
+    line-height: 8pt;
+    text-decoration: none;
+}
+A.LEVEL1:hover {
+    color: #575BFF;
+    text-decoration: underline;
+}
+A.LEVEL1a:hover {
+    text-decoration: underline;
+}
+A.LEVEL2:hover {
+    font-size: xx-small;
+    font-weight: bold;
+}
+A.LEVEL1:visited {
+    color: #FFFFFF;
+}
+A.LEVEL1a:visited {
+    color: #FFFFFF;
+}
+A.LEVEL2:visited {
+    color: #FFFFFF;
+}

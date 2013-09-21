@@ -1,0 +1,35 @@
+a:link {
+  color:#9999CC;
+}
+a:visited {
+  color:#7E587E;
+}
+a:hover {
+  color:#FFFFFF;
+}
+a:active {
+  color:#99CCCC;
+}
+a {
+  text-decoration:none;
+}
+p {
+  line-height:1.5;
+  margin-left:120px;
+  margin-right:120px;
+}
+ol {
+  line-height:1.5;
+  margin-left:150px;
+  margin-right:150px;
+}
+ul {
+  line-height:1.5;
+  margin-left:150px;
+  margin-right:150px;
+}
+span {
+  font-size:14pt;
+}
+body {
+}

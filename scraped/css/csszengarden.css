@@ -1,0 +1,326 @@
+
+body {
+    background: url("zenimages/flower1.gif") repeat fixed 0 0 #88D2FB;
+    font-family: "Comic Sans MS","Lucida Handwriting",cursive;
+    position: relative;
+}
+acronym {
+    text-decoration: none;
+}
+h1, h2, h3, h4 {
+    font-family: "Lucida Handwriting",cursive;
+}
+a:hover {
+    background: url("zenimages/bugging.gif") no-repeat scroll center center transparent;
+}
+#container {
+    background: url("zenimages/strip19.gif") repeat-y scroll 0 0 transparent;
+    color: #333333;
+    margin: 0 auto 55px;
+    padding: 20px 20px 105px 60px;
+    position: relative;
+    text-align: center;
+    width: 760px;
+}
+#pageHeader {
+    height: auto;
+    margin-bottom: 20px;
+    width: 90%;
+}
+#pageHeader h1 {
+    background: url("zenimages/csszengarden.jpg") no-repeat scroll left center transparent;
+    height: 80px;
+    margin: 0 auto;
+    padding-top: 20px;
+    text-align: left;
+}
+#pageHeader h1 span {
+    margin-left: -5000px;
+}
+#pageHeader h2 {
+    background: url("zenimages/lovely-divider.gif") no-repeat scroll center center transparent;
+    color: #000000;
+    height: auto;
+    text-align: center;
+    text-decoration: none;
+}
+#quickSummary {
+    background: url("zenimages/abcdone4.gif") no-repeat scroll 0 0 transparent;
+    height: 160px;
+    margin-left: 20px;
+    padding-left: 185px;
+    text-align: left;
+}
+#quickSummary p.p2 {
+    color: #FF0000;
+    font-size: large;
+    text-align: center;
+    text-decoration: blink;
+}
+#preamble {
+    background: url("zenimages/heyyou.gif") no-repeat scroll right top transparent;
+    color: #FF00CC;
+    float: left;
+    font-family: "Comic Sans MS","Lucida Handwriting";
+    font-weight: bolder;
+    padding: 80px 10px 10px;
+    text-align: center;
+    width: 60%;
+}
+#preamble h3 {
+    color: #00CC66;
+    text-align: center;
+}
+#explanation {
+    background: url("zenimages/buzzing-fly.gif") no-repeat scroll 50% 50% #FFFFFF;
+    border: medium dashed #FF6666;
+    color: #FF0066;
+    float: left;
+    font-family: "Courier New",Courier,mono;
+    padding: 10px;
+    text-align: left;
+    width: 60%;
+}
+#explanation h3 {
+    background: url("zenimages/handl.gif") no-repeat scroll right center transparent;
+    color: #99CC00;
+    font-weight: 700;
+    text-align: center;
+    text-decoration: blink;
+}
+#explanation .p2 {
+    background: url("zenimages/roses.gif") no-repeat scroll left bottom transparent;
+    color: #660066;
+    font-family: Geneva,Arial,Helvetica,sans-serif;
+    font-style: italic;
+    font-weight: 800;
+    padding-left: 85px;
+    text-align: right;
+    text-transform: capitalize;
+}
+#participation {
+    background: none repeat scroll 0 0 transparent;
+    clear: both;
+    padding: 8px;
+}
+#participation h3 {
+    background: url("zenimages/participation.gif") no-repeat scroll 0 0 transparent;
+    height: 90px;
+}
+#participation h3 span {
+    margin-left: -5000px;
+}
+#participation .p1 {
+    background: url("zenimages/broken-picture.gif") no-repeat scroll 15px 15px #FFFFFF;
+    border: medium solid #CCCCCC;
+    color: #00FF66;
+    cursor: help;
+    font-family: "Times New Roman",Times,serif;
+    margin-right: 40%;
+    margin-top: 6px;
+    min-height: 160px;
+    padding-left: 155px;
+}
+#participation .p1 a {
+    color: #FF33CC;
+}
+#participation .p2 {
+    background: url("zenimages/girltwist.gif") no-repeat scroll right center #FFFF33;
+    color: #FF0066;
+    font-style: italic;
+    margin-right: 40%;
+    padding: 30px 70px 30px 30px;
+    text-align: justify;
+    text-transform: uppercase;
+}
+#participation .p3 {
+    background: url("zenimages/madenet1.gif") no-repeat scroll left center #000000;
+    color: #FFFFFF;
+    padding: 10px 10px 10px 170px;
+    text-align: justify;
+}
+#participation .p3 a {
+    color: #FFFF00;
+}
+#benefits {
+    background: url("zenimages/horrid.gif") repeat scroll 0 0 transparent;
+    border-color: #00FFFF #FF0099 #FFFF00 #FF9966;
+    border-style: solid;
+    border-width: thick;
+    margin-bottom: 10px;
+}
+#benefits h3 {
+    background: url("zenimages/benefits.jpg") no-repeat scroll center center transparent;
+    height: 90px;
+}
+#benefits h3 span {
+    margin-left: -5000px;
+}
+#requirements {
+    background: url("zenimages/lily.gif") repeat scroll 0 0 transparent;
+    border: medium none;
+    clear: both;
+    color: #000000;
+    font-size: large;
+    height: 250px;
+    overflow: scroll;
+    padding: 3%;
+    text-align: justify;
+    width: auto;
+}
+#footer {
+    background: url("zenimages/handr.gif") no-repeat scroll 15% center transparent;
+    margin-top: 15px;
+}
+#footer a {
+    border: thick outset #CCCC66;
+    font: bold 15px Arial,Helvetica,sans-serif;
+    height: 30px;
+    margin: 10px;
+    padding: 5px;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    width: 90px;
+}
+#footer a:link {
+    background: none repeat scroll 0 0 #CCCC66;
+    border: medium outset;
+    color: #FFFFFF;
+}
+#footer a:hover, #footer a:active {
+    background: none repeat scroll 0 0 #FFFF66;
+    color: #FF33CC;
+    text-transform: uppercase;
+}
+#linkList {
+    left: 65%;
+    margin-left: 0.5%;
+    margin-right: 0.5%;
+    position: absolute;
+    top: 450px;
+    width: 32%;
+}
+#lselect {
+    background: url("zenimages/hearts.jpg") repeat scroll left center transparent;
+    border: medium ridge #E4E0FA;
+    margin: 10px;
+    padding: 5px;
+    width: auto;
+}
+#lselect h3 {
+    background: url("zenimages/head1.gif") no-repeat scroll center top transparent;
+    height: 65px;
+}
+#lselect h3 span {
+    margin-left: -5000px;
+}
+#lselect ul {
+    cursor: crosshair;
+    font-family: Times New Roman,Times,serif;
+    font-size: x-large;
+    font-style: italic;
+    font-variant: small-caps;
+    font-weight: normal;
+    list-style-image: url("zenimages/flower.gif");
+}
+#larchives {
+    background: url("zenimages/bg_pulsating_star.gif") repeat scroll 0 0 transparent;
+}
+#larchives h3 {
+    background: url("zenimages/archives.gif") no-repeat scroll center center transparent;
+    height: 40px;
+}
+#larchives h3 span {
+    margin-left: -5000px;
+}
+#larchives ul {
+    list-style-image: url("zenimages/smallwow.gif");
+}
+#larchives a {
+    color: #9900FF;
+    line-height: 25px;
+    text-decoration: none;
+}
+#larchives a:hover {
+    background: url("zenimages/Arrows.gif") repeat scroll center center transparent;
+    color: #000000;
+    cursor: w-resize;
+}
+#lresources {
+    background: url("zenimages/geocitie.gif") no-repeat scroll center bottom transparent;
+    padding-bottom: 115px;
+}
+#lresources h3 {
+    background: url("zenimages/css-resources.gif") no-repeat scroll center center transparent;
+    height: 145px;
+}
+#lresources h3 span {
+    margin-left: -5000px;
+}
+#lresources ul {
+    list-style: disc outside url("zenimages/cool3.gif");
+    padding-left: 15px;
+}
+#lresources a {
+    color: #FF6600;
+    text-decoration: none;
+}
+#lresources a:hover {
+    background: url("zenimages/SMALLeyes18.gif") no-repeat scroll center top transparent;
+    color: #FAFAE2;
+}
+#extraDiv2 {
+    background-image: url("zenimages/homepc.gif");
+    height: 88px;
+    left: 758px;
+    position: absolute;
+    top: 34px;
+    width: 108px;
+}
+* html #extraDiv2 {
+    left: 785px;
+    position: absolute;
+    top: 19px;
+}
+#extraDiv1 {
+    background: url("zenimages/constr16.gif") repeat scroll 0 0 transparent;
+    bottom: 40px;
+    height: 40px;
+    left: 150px;
+    position: absolute;
+    width: 128px;
+}
+* html #extraDiv1 {
+    bottom: 80px;
+}
+#extraDiv3 {
+    background: url("zenimages/counter.gif") repeat scroll 0 0 transparent;
+    bottom: 40px;
+    height: 45px;
+    left: 80%;
+    position: absolute;
+    width: 91px;
+}
+* html #extraDiv3 {
+    bottom: 80px;
+}
+#extraDiv4 {
+    background-image: url("zenimages/netscapenow.gif");
+    bottom: 40px;
+    height: 31px;
+    left: 50%;
+    position: absolute;
+    width: 88px;
+}
+* html #extraDiv4 {
+    bottom: 80px;
+}
+#extraDiv5 {
+    background-image: url("zenimages/2hulagirls.gif");
+    height: 69px;
+    left: 15%;
+    position: absolute;
+    top: 360px;
+    width: 107px;
+}

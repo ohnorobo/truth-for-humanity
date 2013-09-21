@@ -1,0 +1,18 @@
+.style1 {
+    color: #FF0000;
+}
+#table2 {
+    border-width: 1px;
+    height: 505px;
+    width: 775px;
+}
+.style2 {
+    border-style: solid;
+}
+.style3 {
+    font-size: x-large;
+    font-weight: bold;
+}
+.style4 {
+    color: #008000;
+}
