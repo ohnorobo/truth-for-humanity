@@ -28,7 +28,7 @@ def RandomSection(term):
     b += endtag
     sentences = random.randrange(5, 20)
     for _ in xrange(sentences):
-         b += RandomSentence(term)
+         b += RandomElement(term)
     return b
 
 def getTag():
@@ -52,7 +52,7 @@ def getTag():
 
 
 def RandomElement(term):
-    if (random.randint(0,1) == 0):
+    if (random.randint(0,4) == 0):
         return RandomImage(term)
     else:
         return RandomSentence(term)
