@@ -1,33 +1,24 @@
 
-var yourstring="ninjas";
+$( document ).ready(function() {
+// Handler for .ready() called.
+var str = $( "body" ).text();
+
+var words = str.split(" ");
+var count=words.length;
+
+console.log(words.length);
+var randomNum = Math.ceil(Math.random()*count); 
 
 
-$('p:contains('+yourstring+')', document.body).each(function(){
-  $(this).html($(this).html().replace(
-        new RegExp(yourstring, 'g'), '<span class=someclass>'+yourstring+'</span>'
-  ));
-}​);​
-
-/*
-var txt=$("body").text;
-var wordCount = txt.replace( /[^\w ]/g, "" ).split( /\s+/ ).length
-var rand = Math.ceil(Math.random()*wordCount);
-
-$( "body" ).slice( rand ).css( "background-color", "red" );
+var searchString=words[randomNum];
+//str=str.replace(searchString,"<span style='backgrond-color:red'>"+searchString+"</span>");
+str=str.replace(searchString,"<span style='color:sienna;background-color:yellow;font-size:40px;'>"+searchString+"</span>");
+$( "body:last" ).html( str );
 
 
-var txt = $("body").text();
-//  Split every word
-var words = txt.split(" ");
-//  Count the amount of words
-var amount = words.length
 
-console.log(words[120])
 
-var randomword=words[120];
+});
 
-$( "body:contains("+randomword+")" ).css( "text-decoration", "underline" );
 
-$( "body:contains("+randomword+")" ).replace
-//words[10].css("background-color","red");
-*/
+
