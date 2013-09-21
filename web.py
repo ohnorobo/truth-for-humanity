@@ -11,9 +11,22 @@ app = flask.Flask(__name__)
 def generate_page(term):
 
   #generate html
+  path = generate_html(term)
   #generate css
 
-  return "some/path/to/html"
+  return path
+
+
+import gen_html
+def generate_html(term):
+  html = gen_html.generate();
+  filename = "page.html"
+  path = filename
+  f = open("templates/"+path, 'w') #html pages go in templates/
+  f.write(str(html))
+  f.close()
+  return path
+
 
 
 
@@ -28,6 +41,6 @@ if __name__ == "__main__":
     app.debug = True
 
     host="127.0.0.1"
-    port=80    #run on 80 by default
+    port=8080    #run on 80 by default
 
     app.run(host=host, port=int(port))
