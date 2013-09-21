@@ -33,10 +33,17 @@ def RandomSection(term):
 
 def getTag():
   tags = [("<h1>","</h1>"),
+          ("<h1>","</h1>"),
+          ("<h1>","</h1>"),
           ("<h2>","</h2>"),
+          ("<h2>","</h2>"),
+          ("<h2>","</h2>"),
+          ("<h3>","</h3>"),
+          ("<h3>","</h3>"),
           ("<h3>","</h3>"),
           ("<h4>","</h4>"),
           ("<div>","</div>"),
+          ("<div id=\"results\">","</div>"), #for flickr images
           ("<li>","</li>"),
           ("<ul>","</ul>"),
           ("<p>","</p>"),
@@ -52,7 +59,7 @@ def getTag():
 
 
 def RandomElement(term):
-    if (random.randint(0,4) == 0):
+    if (random.randint(0,6) == 0):
         return RandomImage(term)
     else:
         return RandomSentence(term)
