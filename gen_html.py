@@ -8,9 +8,9 @@ sys.setrecursionlimit(10000)
 def RandomHtml(term):
     #link to javascript and css files
     return '''<html> <head> 
-               <link href="../css/main.css" rel="stylesheet">
+               <link href="../static/css/main.css" rel="stylesheet">
                <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" ></script>
-               <script src="../js/main.js"></script>
+               <script src="../static/js/main.js"></script>
                </head>''' + \
                '<body>' + '<body>' + RandomBody(term) + '</body></html>'
 
@@ -24,7 +24,7 @@ def RandomSection(term):
     starttag, endtag = getTag()
     b = ""
     b += starttag
-    b += RandomSentence(term)
+    b += RandomElement(term)
     b += endtag
     sentences = random.randrange(5, 20)
     for _ in xrange(sentences):
@@ -49,6 +49,13 @@ def getTag():
           ]
 
   return random.choice(tags)
+
+
+def RandomElement(term):
+    return RandomSentence(term)
+    #later - randomimage
+    #randomfact
+    #etc
 
 def RandomSentence(term):
     sent = SampleSentence()
