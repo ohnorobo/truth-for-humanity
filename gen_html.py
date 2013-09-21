@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 #http://stackoverflow.com/questions/2795134/how-to-generate-random-html-document
 
-import random, string, operator, codecs, sys
+import random, string, operator, codecs, sys, glob
 sys.setrecursionlimit(10000)
 
 
@@ -52,10 +52,29 @@ def getTag():
 
 
 def RandomElement(term):
-    return RandomSentence(term)
+    if (random.randint(0,1) == 0):
+        return RandomImage(term)
+    else:
+        return RandomSentence(term)
     #later - randomimage
     #randomfact
     #etc
+
+def RandomImage(term):
+    #eventually- get specific images from the web
+
+    #currently- get images from out retro-set
+    dirs = ["static/scraped/images/*.*", 
+           "static/scraped/images/banners/*.*", 
+           "static/scraped/images/donate/*.*", 
+           "static/scraped/images/gif/*.gif", 
+           "static/scraped/images/under_construction/*.*"]
+    d = random.choice(dirs)
+    file = random.choice(glob.glob(d));
+
+    return "<img src="+file+">"
+
+
 
 def RandomSentence(term):
     sent = SampleSentence()
