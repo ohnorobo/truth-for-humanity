@@ -16,8 +16,8 @@ def RandomHtml(term):
 
 def RandomBody(term):
     b =  RandomSection(term)
-    for _ in xrange(random.choice([0, 0, 0, 0, 0, 1, 2, 3, 4, 5])):
-        b += RandomBody(term)
+    for _ in xrange(random.choice([10, 20, 30])):
+        b += RandomSection(term)
     return b
 
 def RandomSection(term):
@@ -33,8 +33,19 @@ def RandomSection(term):
 
 def getTag():
   tags = [("<h1>","</h1>"),
-          ("<h1>","</h1>"),
-          ("<h1>","</h1>"),
+          ("<h2>","</h2>"),
+          ("<h3>","</h3>"),
+          ("<h4>","</h4>"),
+          ("<div>","</div>"),
+          ("<li>","</li>"),
+          ("<ul>","</ul>"),
+          ("<p>","</p>"),
+          ("<strong>","</strong>"),
+          ("<blink>","</blink>"), #YES
+          ("<menu>","</menu>"),
+          ("<container>","</container>"),
+          ("<span>","</span>"),
+          ("<i>","</i>"),
           ]
 
   return random.choice(tags)
