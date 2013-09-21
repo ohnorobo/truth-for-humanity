@@ -1,0 +1,23 @@
+.ts {
+    border-collapse: collapse;
+}
+.med {
+    font-size: medium;
+    font-weight: normal;
+    margin: 0;
+    padding: 0;
+}
+#res {
+    margin: 0 16px;
+    padding-right: 1em;
+}
+ol li {
+    list-style: none outside none;
+}
+.g {
+    margin: 1em 0;
+}
+li.g {
+    font-family: arial,sans-serif;
+    font-size: small;
+}
