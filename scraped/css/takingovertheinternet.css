@@ -1,0 +1,187 @@
+/*! Custom normalize.css v1.1.0 | MIT License | git.io/normalize */
+html{font-size:100%;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%}html,button,input,select,textarea{font-family:sans-serif}body{margin:0}a:focus{outline:thin dotted}a:active,a:hover{outline:0}h1{font-size:2em;margin:.67em 0}h2{font-size:1.5em;margin:.83em 0}h3{font-size:1.17em;margin:1em 0}b,strong{font-weight:bold}blockquote{margin:1em 40px}p,pre{margin:1em 0}dl,menu,ol,ul{margin:1em 0}dd{margin:0 0 0 40px}menu,ol,ul{padding:0 0 0 40px}nav ul,nav ol{list-style:none;list-style-image:none}img{border:0;-ms-interpolation-mode:bicubic}svg:not(:root){overflow:hidden}form{margin:0}fieldset{border:1px solid #c0c0c0;margin:0 2px;padding:.35em .625em .75em}button,input,select,textarea{font-size:100%;margin:0;vertical-align:baseline;*vertical-align:middle}button,input{line-height:normal}button,select{text-transform:none}button,html input[type="button"],input[type="reset"],input[type="submit"]{-webkit-appearance:button;cursor:pointer;*overflow:visible}button[disabled],html input[disabled]{cursor:default}input[type="checkbox"],input[type="radio"]{box-sizing:border-box;padding:0;*height:13px;*width:13px}input[type="search"]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box}input[type="search"]::-webkit-search-cancel-button,input[type="search"]::-webkit-search-decoration{-webkit-appearance:none}button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}
+
+html {
+	overflow-y: scroll;
+}
+
+body {
+	color: #444;
+}
+
+a,
+a:visited {
+	color: #3b65a7;
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+h2 {
+	margin: 18px 0;
+	line-height: 24px;
+	font-size: 24px;
+}
+
+.inline-block {
+	display: inline-block;
+	zoom: 1;
+	*display: inline;
+}
+
+.media,
+.media-body {
+	overflow: hidden;
+	_overflow: visible;
+	zoom: 1;
+}
+
+.media-img {
+	float: left;
+	margin: 0 20px 0 14px;
+}
+
+.ybtn {
+	display: inline-block;
+	vertical-align: middle;
+	margin: 0 0 1px 0;
+	padding: 3px 16px;
+	border-radius: 4px;
+	font-size: 12px;
+	font-weight: bold;
+	line-height: 20px;
+	text-align: center;
+	cursor: pointer;
+	-webkit-box-shadow:
+		0 1px 1px rgba(0, 0, 0, .1),
+		inset 0 1px 0 rgba(255, 255, 255, .5);
+	box-shadow:
+		0 1px 1px rgba(0, 0, 0, .1),
+		inset 0 1px 0 rgba(255, 255, 255, .5);
+}
+
+.ybtn-primary {
+	color: white;
+	background-color: #d80b06;
+	background-image: -webkit-linear-gradient(top, #ea050b, #c41200);
+	background-image:    -moz-linear-gradient(top, #ea050b, #c41200);
+	background-image:         linear-gradient(#ea050b, #c41200);
+	text-shadow: 0 -1px 1px #b80806;
+	border: 1px solid #a50508;
+}
+
+.ybtn-primary:hover {
+	color: white;
+	background-color: #e20b06;
+	background-image: -webkit-linear-gradient(top, #f4050b, #ce1300);
+	background-image:    -moz-linear-gradient(top, #f4050b, #ce1300);
+	background-image:         linear-gradient(#f4050b, #ce1300);
+}
+
+.wrap {
+	width: 990px;
+	position: relative;
+	margin: 29px auto;
+}
+
+.logo {
+	display: block;
+	height: 80px;
+	background: #c81001;
+	background: -webkit-linear-gradient(top,  #df1301 0%,#c81001 50%);
+	background:    -moz-linear-gradient(top,  #df1301 0%, #c81001 50%);
+	background:         linear-gradient(#df1301 0%,#c81001 50%);
+	border-radius: 8px;
+}
+
+.logo img {
+	display: block;
+	margin: auto;
+	padding-top: 8px;
+}
+
+.logo.has-label img {
+	margin-left: 15px;
+}
+
+.logo.has-label .header-label {
+	position: absolute;
+	top: 31px;
+	left: 136px;
+	font-size: 24px;
+	font-weight: bold;
+	color: #fff;
+	text-shadow: 0 1px 2px #000;
+}
+
+.error-label {
+	position: absolute;
+	font-family: 'Helvetica Neue', Arial, sans-serif;
+	right: 0;
+	top: 60px;
+	z-index: -1;
+	margin: 0;
+	font-size: 216px;
+	color: #f4f4f4;
+	text-shadow: 0 -1px 1px #ddd;
+}
+
+.yelpy-red {
+	color: #C41200;
+}
+
+blockquote {
+	margin: 18px 0;
+	line-height: 24px;
+}
+
+.search-instructions {
+	margin-bottom: 6px;
+	line-height: 24px;
+}
+
+.media-body {
+	padding: 0 0 6px 5px;
+}
+
+label {
+	margin: 5px 5px 0 0;
+	font-weight: bold;
+	color: #C41200;
+}
+
+label input {
+	display: block;
+	padding: 3px;
+	margin-top: 4px;
+}
+
+.search-submit {
+	vertical-align: bottom;
+}
+
+.main {
+	margin: 30px auto;
+}
+
+.darwin {
+	width: 318px;
+	height: 463px;
+}
+
+.footer {
+	border-top: 1px solid #e5e5e5;
+	text-align: center;
+	line-height: 12px;
+	font-size: 12px;
+}
+
+.footer ul {
+	padding: 0;
+}
+
+.footer li {
+	display: inline;
+}
