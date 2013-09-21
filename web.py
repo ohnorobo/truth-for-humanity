@@ -1,7 +1,7 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 
-import sys, flask, os
+import sys, flask, os, codecs
 
 app = flask.Flask(__name__)
 
@@ -19,11 +19,12 @@ def generate_page(term):
 
 import gen_html
 def generate_html(term):
-  html = gen_html.generate();
+  html = gen_html.generate(term);
   filename = "page.html"
   path = filename
-  f = open("templates/"+path, 'w') #html pages go in templates/
-  f.write(str(html))
+  f = codecs.open("templates/"+path, 'w', 'utf-8') 
+    #html pages go in templates/
+  f.write(html)
   f.close()
   return path
 

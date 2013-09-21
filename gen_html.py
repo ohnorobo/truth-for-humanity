@@ -1,37 +1,52 @@
-import random, string, operator
+# -*- coding: utf-8 -*-
+#http://stackoverflow.com/questions/2795134/how-to-generate-random-html-document
 
-def RandomHtml():
-    yield '<html><body>'
-    yield '<body>'
-    yield RandomBody()
-    yield '</body></html>'
+import random, string, operator, codecs, sys
+#sys.setrecursionlimit(100)
 
-def RandomBody():
-    yield RandomSection()
-    if random.randrange(2) == 0:
-        yield RandomBody()
 
-def RandomSection():
-    yield '<h1>'
-    yield RandomSentence()
-    yield '</h1>'
+def RandomHtml(term):
+    return '<html><body>' + '<body>' + RandomBody(term) + '</body></html>'
+
+def RandomBody(term):
+    b =  RandomSection(term)
+    if random.randrange(10) == 0:
+        b += RandomBody(term)
+    return b
+
+def RandomSection(term):
+    b = ""
+    b += '<h1>'
+    b += RandomSentence(term)
+    b += '</h1>'
     sentences = random.randrange(5, 20)
     for _ in xrange(sentences):
-         yield RandomSentence()
+         b += RandomSentence(term)
+    return b
 
-def RandomSentence():
-    words = random.randrange(5, 15)
-    yield (' '.join(RandomWord() for _ in xrange(words)) + '.').capitalize()
+def RandomSentence(term):
+    sent = SampleSentence()
+    sent = sent.replace(u"[BLANK]", term)
+    print "** sentence: " + sent
+    return sent
 
-def RandomWord():
-    chars = random.randrange(2, 10)
-    return ''.join(random.choice(string.ascii_lowercase) for _ in xrange(chars))
+
+CRAZY_FILE = "sampletext/crazy.txt"
+#get a sample crazy sentence
+def SampleSentence():
+  lines = codecs.open(CRAZY_FILE, "r", "utf-8").read().splitlines()
+  line = random.choice(lines)
+  return line
+
+
 
 def getString(generator):
+    print "getting str of "
+    print generator
     if isinstance(generator, str):
         return generator
     else:
         return reduce(operator.add, [getString(item) for item in generator], "")
 
-def generate():
-  return getString(RandomHtml())
+def generate(term):
+  return RandomHtml(term)
