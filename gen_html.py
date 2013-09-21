@@ -2,27 +2,42 @@
 #http://stackoverflow.com/questions/2795134/how-to-generate-random-html-document
 
 import random, string, operator, codecs, sys
-#sys.setrecursionlimit(100)
+sys.setrecursionlimit(10000)
 
 
 def RandomHtml(term):
-    return '<html><body>' + '<body>' + RandomBody(term) + '</body></html>'
+    #link to javascript and css files
+    return '''<html> <head> 
+               <link href="../css/main.css" rel="stylesheet">
+               <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" ></script>
+               <script src="../js/main.js"></script>
+               </head>''' + \
+               '<body>' + '<body>' + RandomBody(term) + '</body></html>'
 
 def RandomBody(term):
     b =  RandomSection(term)
-    if random.randrange(10) == 0:
+    for _ in xrange(random.choice([0, 0, 0, 0, 0, 1, 2, 3, 4, 5])):
         b += RandomBody(term)
     return b
 
 def RandomSection(term):
+    starttag, endtag = getTag()
     b = ""
-    b += '<h1>'
+    b += starttag
     b += RandomSentence(term)
-    b += '</h1>'
+    b += endtag
     sentences = random.randrange(5, 20)
     for _ in xrange(sentences):
          b += RandomSentence(term)
     return b
+
+def getTag():
+  tags = [("<h1>","</h1>"),
+          ("<h1>","</h1>"),
+          ("<h1>","</h1>"),
+          ]
+
+  return random.choice(tags)
 
 def RandomSentence(term):
     sent = SampleSentence()
@@ -32,11 +47,16 @@ def RandomSentence(term):
 
 
 CRAZY_FILE = "sampletext/crazy.txt"
+TIMECUBE_FILE = "sampletext/timecube.txt"
+def choose_file():
+  sample_files = {CRAZY_FILE: 5, TIMECUBE_FILE: 1}
+  return random.choice([x for x in sample_files for y in range(sample_files[x])])
+
 #get a sample crazy sentence
 def SampleSentence():
-  lines = codecs.open(CRAZY_FILE, "r", "utf-8").read().splitlines()
+  lines = codecs.open(choose_file(), "r", "utf-8").read().splitlines()
   line = random.choice(lines)
-  return line
+  return line + " "
 
 
 

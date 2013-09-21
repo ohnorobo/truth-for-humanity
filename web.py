@@ -28,7 +28,9 @@ def generate_html(term):
   f.close()
   return path
 
-
+@app.route("/favicon.ico")
+def favicon():
+    return "";
 
 
 @app.route("/<term>")
