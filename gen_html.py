@@ -59,11 +59,10 @@ def getTag():
 
 
 def RandomElement(term):
-    if (random.randint(0,6) == 0):
+    if (random.randint(0,2) == 0):
         return RandomImage(term)
     else:
-        return RandomSentence(term)
-    #later - randomimage
+        return "<p>" + RandomSentences(term, random.randint(0, 7)) + "</p>"
     #randomfact
     #etc
 
@@ -82,11 +81,16 @@ def RandomImage(term):
     return "<img src="+file+">"
 
 
+def RandomSentences(term, count):
+    b = ""
+    for _ in xrange(count):
+        b += RandomSentence(term)
+    return b
 
 def RandomSentence(term):
     sent = SampleSentence()
     sent = sent.replace(u"[BLANK]", term)
-    return "<p>"+sent+"</p>" #p tags are around text
+    return sent
 
 
 CRAZY_FILE = "sampletext/crazy.txt"
