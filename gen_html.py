@@ -9,6 +9,10 @@ def RandomHtml(term):
     #link to javascript and css files
     return '''<html> <head> 
                <link href="../static/css/main.css" rel="stylesheet">
+               <link href="../static/css/webfonts.css" rel="stylesheet">
+
+               <link href='http://fonts.googleapis.com/css?family=Londrina+Outline' rel='stylesheet' type='text/css'>
+               <link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
                <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" ></script>
                <script src="../static/js/main.js"></script>
                </head>''' + \
@@ -57,6 +61,15 @@ def getTag():
 
   return random.choice(tags)
 
+def spanTagWithId():
+  tags = [("<span id=\"font1\">","</span>"),
+          ("<span id=\"font2\">","</span>"),
+          ("<span id=\"font3\">","</span>"),
+          ("<span id=\"font4\">","</span>"),
+          ("<span id=\"font5\">","</span>"),
+          ("<span id=\"font6\">","</span>"),
+         ]
+  return random.choice(tags)
 
 def RandomElement(term):
     if (random.randint(0,2) == 0):
@@ -90,6 +103,11 @@ def RandomSentences(term, count):
 def RandomSentence(term):
     sent = SampleSentence()
     sent = sent.replace(u"[BLANK]", term)
+
+    if (random.randint(0, 4) == 0): #special font id
+      pstart, pend = spanTagWithId()
+      sent = pstart + sent + pend
+
     return sent
 
 
