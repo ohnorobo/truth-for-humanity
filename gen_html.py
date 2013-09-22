@@ -46,7 +46,7 @@ def getTag():
           ("<div id=\"results\">","</div>"), #for flickr images
           ("<li>","</li>"),
           ("<ul>","</ul>"),
-          ("<p>","</p>"),
+          #("<p>","</p>"),
           ("<strong>","</strong>"),
           ("<blink>","</blink>"), #YES
           ("<menu>","</menu>"),
@@ -86,14 +86,13 @@ def RandomImage(term):
 def RandomSentence(term):
     sent = SampleSentence()
     sent = sent.replace(u"[BLANK]", term)
-    print "** sentence: " + sent
-    return sent
+    return "<p>"+sent+"</p>" #p tags are around text
 
 
 CRAZY_FILE = "sampletext/crazy.txt"
 TIMECUBE_FILE = "sampletext/timecube.txt"
 def choose_file():
-  sample_files = {CRAZY_FILE: 5, TIMECUBE_FILE: 1}
+  sample_files = {CRAZY_FILE: 5}
   return random.choice([x for x in sample_files for y in range(sample_files[x])])
 
 #get a sample crazy sentence
