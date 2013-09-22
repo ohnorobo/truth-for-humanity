@@ -8,3 +8,10 @@ Hackathon Project for [Comedy Hack Day](https://www.hackerleague.org/hackathons/
 
 
 Live at [http://truth-for-humanity.herokuapp.com/](http://truth-for-humanity.herokuapp.com/)
+
+Contributors
+* Ben Apple
+* Che-Wei Wang
+* Matt Klinman
+* Sarah Laplante
+* Taylor Levy
