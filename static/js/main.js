@@ -173,7 +173,7 @@ $( document ).ready(function() {
 			// }
 			
          
-			if ( i >= 100)return false;
+			if ( i >= 20)return false;
 
 	       });
 	
