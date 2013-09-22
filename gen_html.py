@@ -23,10 +23,11 @@ def RandomHtml(term):
 def RandomBody(term):
     b =  RandomSection(term)
     for _ in xrange(random.choice([10, 20, 30])):
-        b += RandomSection(term)
+        for x in range((random.choice([1,1,1,2,3]))): #sometimes columns
+            b += RandomSection(term, x)
     return b
 
-def RandomSection(term):
+def RandomSection(term, cols=1):
     starttag, endtag = getTag()
     b = ""
     b += starttag
@@ -34,10 +35,10 @@ def RandomSection(term):
     b += endtag
     sentences = random.randrange(5, 20)
     for _ in xrange(sentences):
-         b += RandomElement(term)
+        b += RandomElement(term)
     return b
 
-def getTag():
+def getTag(cols=1):
   tags = [("<h1>","</h1>"),
           ("<h1>","</h1>"),
           ("<h1>","</h1>"),
@@ -61,7 +62,12 @@ def getTag():
           ("<i>","</i>"),
           ]
 
-  return random.choice(tags)
+  stag, etag = random.choice(tags)
+
+  if (cols != 1 and not "id" in stag):
+      stag = stag[:-2] + "id=column" + str(cols) + " " + stag[-1:]
+
+  return stag, etag
 
 def spanTagWithId():
   tags = [("<span id=\"font1\">","</span>"),
