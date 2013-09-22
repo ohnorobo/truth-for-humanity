@@ -18,7 +18,8 @@ def RandomHtml(term):
                <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" ></script>
                <script src="../static/js/main.js"></script>
                </head>''' + \
-               '<body>' + '<body>' + RandomBody(term) + '</body></html>'
+               '''<body>''' + \
+               RandomBody(term) + '</body></html>'
 
 def RandomBody(term):
     b =  RandomSection(term)
@@ -80,12 +81,27 @@ def spanTagWithId():
   return random.choice(tags)
 
 def RandomElement(term):
+    if (random.randint(0, 7) == 0):
+        return socialButtons()
     if (random.randint(0,2) == 0):
         return RandomImage(term)
     else:
         return "<p>" + RandomSentences(term, random.randint(0, 7)) + "</p>"
     #randomfact
     #etc
+
+def socialButtons():
+    return '''<!-- AddThis Button BEGIN -->
+    <div class="addthis_toolbox addthis_default_style addthis_32x32_style">
+    <a class="addthis_button_preferred_1"></a>
+    <a class="addthis_button_preferred_2"></a>
+    <a class="addthis_button_preferred_3"></a>
+    <a class="addthis_button_preferred_4"></a>
+    <a class="addthis_button_compact"></a>
+    <a class="addthis_counter addthis_bubble_style"></a>
+    </div>
+    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=xa-523f1f6e47ff1123"></script>
+    <!-- AddThis Button END -->'''
 
 def RandomImage(term):
     #eventually- get specific images from the web
