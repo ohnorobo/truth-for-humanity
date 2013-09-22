@@ -68,7 +68,7 @@ $( document ).ready(function() {
 		
 		if(i>=20)return;
 		
-		if(item.contains(unescape(searchString)))
+		if(item.indexOf(unescape(searchString)) != -1)
 		{
 			//console.log(item);
 		
