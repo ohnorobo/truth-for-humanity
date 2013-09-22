@@ -5,27 +5,33 @@ $( document ).ready(function() {
 	//$("h4").css("backgroundColor", colors[Math.floor(Math.random() * colors.length)]);
 	//$("h4").css("color", "red");
 	
+	//window.history.pushState("object or string", "URL", "test");
 	
 	
-	//highlight search term
+	//get search term
 	var url = window.location.pathname;
-	
 	var array = url.split('/');
 	var searchString = array[array.length-1];
 	console.log(searchString);
 	
-	var str=$("body").text();
 	var tCSS=['t1','t2','t3', 't4','t5','t6','t7','t8','t9','t10'];
+	
+	
+	var str=$("body").text();
+	
 	
 	//highlight first word
 	// var randCSS=tCSS[Math.floor(Math.random() * tCSS.length)];	
 	// str=$("body").html().replace(searchString,"<span class='"+randCSS+"'>"+searchString+"</span>");
 	// $( "body" ).html( str );
 	
-
+	//set body text color
 	var colors=['red','yellow','cyan','orange'];
 	var rand=Math.floor(Math.random() * colors.length);
 	$( "body" ).css('color', colors[rand] );
+	
+	var randMargin=Math.random()*50;
+	$( "body" ).css('margin', randMargin+'px' );
 
 
 

@@ -59,7 +59,7 @@
 	color:black; 
 	font-weight:bold;
 	font-size:23px;
-	line-height:1em;
+	line-height:1.2em;
 	text-decoration:underline;
 	
 }
@@ -69,8 +69,8 @@
 	background-color:black;
 	 
 	font-weight:bold;
-	font-size:23px;
-	line-height:1em;
+	font-size:53px;
+	line-height:1.2em;
 	text-decoration:underline;
 	
 }
@@ -79,7 +79,7 @@
 	background-color:black;
 	font-weight:bold;
 	font-size:18px;
-	line-height:1em;
+	line-height:1.3em;
 	text-decoration:underline;
 }
 .t10{
@@ -87,7 +87,7 @@
 	background-color:black;
 	font-weight:italic;
 	font-size:16px;
-	line-height:1em;
+	line-height:1.3em;
 	text-decoration:underline;
 }
 
@@ -95,7 +95,7 @@
 
 .p1{
 	border:3px red;
-	margin:20px;
+	margin:80px;
 	   padding: 50px;
 }
 
@@ -107,7 +107,7 @@
 }
 .p3{
 	border:6px outset ;
-	margin:10px;
+	margin:100px;
 	background:black;
 	color:white;
 	   padding: 20px;
@@ -139,7 +139,7 @@
 
 .p7{
 	border:2px dotted black;
-	margin:100px;
+	margin:200px;
 	background:orange;
 	padding: 20px;
 }
