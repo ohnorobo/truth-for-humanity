@@ -1,15 +1,17 @@
 .t1{
 	color:sienna; 
 	background-color:yellow;
-	font-size:24px;
+	font-size:32px;
 	line-height:1.9em;
+	font-family:ariel;
 	
 }
 .t2{
 	color:red; 
 	background-color:green;
-	font-size:32px;
+	font-size:42px;
 	line-height:1.5em;
+	font-family:ariel;
 	
 }
 
@@ -18,13 +20,16 @@
 	color:orange; 
 	background-color:cyan;
 	text-decoration:italic;
+	font-size:37px;
+	line-height:1.5em;
+	font-family:ariel;
 }
 
 .t4{
 	color:blue; 
 	background-color:white;
 	text-decoration:italic;
-	font-size:32px;
+	font-size:42px;
 	line-height:1.5em;
 	
 }
@@ -32,8 +37,16 @@
 	color:green; 
 	background-color:pink;
 	font-weight:bold;
-	font-size:43px;
+	font-size:23px;
 	line-height:2em;
+}
+.t6{
+	color:purple; 
+	background-color:yellow;
+	font-weight:bold;
+	font-size:23px;
+	line-height:2em;
+	text-transform:uppercase;
 }
 
 
