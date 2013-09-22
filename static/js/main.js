@@ -16,7 +16,7 @@ $( document ).ready(function() {
 	console.log(searchString);
 	
 	var str=$("body").text();
-	var tCSS=['t1','t2','t3', 't4','t5'];
+	var tCSS=['t1','t2','t3', 't4','t5','t6'];
 	
 	
 	var randCSS=tCSS[Math.floor(Math.random() * tCSS.length)];	
@@ -28,15 +28,31 @@ $( document ).ready(function() {
 	cleanText = str.replace(/<\/?[^>]+(>|$)/g, "");
 	var sentences=cleanText.split(".");
 	
-	randCSS=tCSS[Math.floor(Math.random() * tCSS.length)];	
-	console.log(sentences[1]);
-	str=$("body").html().replace(sentences[1],"<span class='"+randCSS+"'>"+sentences[1]+"</span>");
-	$( "body:last" ).html( str );
 	
-	randCSS=tCSS[Math.floor(Math.random() * tCSS.length)];	
-	console.log(sentences[6]);
-	str=$("body").html().replace(sentences[6],"<span class='"+randCSS+"'>"+sentences[6]+"</span>");
-	$( "body:last" ).html( str );
+	$.each(sentences, function(i,item){
+		if(item.contains(searchString))
+			{
+	 		randCSS=tCSS[Math.floor(Math.random() * tCSS.length)];	
+			console.log(item);
+			str=$("body").html().replace(item,"<span class='"+randCSS+"'>"+item+"</span>");
+			$( "body:last" ).html( str );
+		}
+	});
+
+
+
+
+
+
+	// randCSS=tCSS[Math.floor(Math.random() * tCSS.length)];	
+	// console.log(sentences[1]);
+	// str=$("body").html().replace(sentences[1],"<span class='"+randCSS+"'>"+sentences[1]+"</span>");
+	// $( "body:last" ).html( str );
+	// 
+	// randCSS=tCSS[Math.floor(Math.random() * tCSS.length)];	
+	// console.log(sentences[6]);
+	// str=$("body").html().replace(sentences[6],"<span class='"+randCSS+"'>"+sentences[6]+"</span>");
+	// $( "body:last" ).html( str );
 	
 	
 	
@@ -51,30 +67,37 @@ $( document ).ready(function() {
 	//background based on search
 	     $.getJSON("http://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?",
 	     {
-	       tags: unescape(searchString),
-	       tagmode: "all",
-	       format: "json",
-	is_getty:"true" //only getty images
-	     },
-	     function(data) {
-	       $.each(data.items, function(i,item){
-	if ( i == 1){
-		$('body').css({'background-image': 'url('+ item.media.m + ')'});
-		$('body').css({'background-image': 'url('+ item.media.m + ')'});
+			       tags: unescape(searchString),
+			       tagmode: "all",
+			       format: "json",
+			is_getty:"true" //only getty images
+			     },
+			     function(data) {
+			       $.each(data.items, function(i,item){
+			if ( i == 1){
+				$('body').css({'background-image': 'url('+ item.media.m + ')'});
+				$('body').css({'background-image': 'url('+ item.media.m + ')'});
 	
-		var rand=1+Math.floor(Math.random() *10);
-		$('body').css({'background-size': 100*rand+'px'});
+				var rand=1+Math.floor(Math.random() *10);
+				$('body').css({'background-size': 100*rand+'px'});
 	
-		//background-size: 490px;
-	}
-	else {
-	          var img=$("<img/>").attr("src", item.media.m).prependTo("#results");
-		var rand=1+Math.floor(Math.random() *3);
-			img.css('width',100*rand+'px');
+				//background-size: 490px;
+			}
+			else if ( i == 2){
+				var img=$("<img/>").attr("src", item.media.m).prependTo("p:first");
+								
+			}
+			else {
+		
+				//insert images
+				var img=$("<img/>").attr("src", item.media.m).prependTo("#results");
+				var rand=1+Math.floor(Math.random() *3);
+				img.css('width',100*rand+'px');
 
-	}
+			}
+			
          
-	if ( i == 11)return false;
+			if ( i == 11)return false;
 
 	       });
 	
