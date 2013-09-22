@@ -12,7 +12,13 @@ $( document ).ready(function() {
 	var url = window.location.pathname;
 	var array = url.split('/');
 	var searchString = array[array.length-1];
+	
+	// searchString=searchString.replace('the%20', '');
+	// searchString=searchString.replace('The%20', '');
+	// 
 	console.log(searchString);
+	
+	
 	
 	var tCSS=['t1','t2','t3', 't4','t5','t6','t7','t8','t9','t10'];
 	
