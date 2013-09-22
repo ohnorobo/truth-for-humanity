@@ -28,7 +28,7 @@ $( document ).ready(function() {
 	cleanText = str.replace(/<\/?[^>]+(>|$)/g, "");
 	var sentences=cleanText.split(".");
 	$.each(sentences, function(i,item){
-		if(i>=5)return;
+		if(i>=10)return;
 		
 		if(item.contains(searchString))
 		{
@@ -44,11 +44,12 @@ $( document ).ready(function() {
 
 	//highlight random paragraph
 
-	var pCSS=['p1','p2','p3'];
-	var random = Math.floor(Math.random() * 3 );
-	randCSS=pCSS[Math.floor(Math.random() * pCSS.length)];	
-	$("p").eq(random).attr("class", randCSS);
-
+	for( var i=0; i<10; i++){
+		var pCSS=['p1','p2','p3','p4','p5'];
+		randCSS=pCSS[Math.floor(Math.random() * pCSS.length)];	
+		var random = Math.floor(Math.random() * 10 );
+		$("p").eq(random).attr("class", randCSS);
+	}
 
 	// randCSS=tCSS[Math.floor(Math.random() * tCSS.length)];	
 	// console.log(sentences[1]);
@@ -92,10 +93,42 @@ $( document ).ready(function() {
 			
 			//set paragraph image
 			else if ( i == 2){
-				var img=$("<img/>").attr("src", item.media.m).prependTo("p:first");
+				var r=1+Math.floor(Math.random() *10);
+				
+				var img=$("<img/>").attr("src", item.media.m).prependTo("p:eq("+r+")");
 				img.css('width',400+'px');
-				img.css('padding','100px');
+				img.css('padding','30px');
+				img.css('float','left');
+				
 			}
+			
+			else if ( i == 3){
+				var r=1+Math.floor(Math.random() *10);
+				
+				var img=$("<img/>").attr("src", item.media.m).prependTo("p:eq("+r+")");
+				img.css('width',400+'px');
+				img.css('padding','30px');
+				img.css('float','right');
+				
+				randCSS=pCSS[Math.floor(Math.random() * pCSS.length)];	
+				item.parent().attr("class", randCSS);
+								
+			}
+			
+			
+			
+			else if ( i == 5){
+				var r=1+Math.floor(Math.random() *10);
+				
+				var img=$("<img/>").attr("src", item.media.m).prependTo("p:eq("+r+")");
+				img.css('width',400+'px');
+				img.css('padding','30px');
+				img.css('float','right');
+				
+			}
+			
+
+			
 			else {
 		
 				//insert images

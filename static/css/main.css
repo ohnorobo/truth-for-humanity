@@ -74,18 +74,23 @@
 .p4{
 	border:3px inset;
 	margin:10px;
-	background:black;
+	background:blue;
 	color:white;
 	   padding: 20px;
 }
 .p5{
 	border:6px groove;
 	margin:10px;
-	background:black;
+	background:cyan;
 	color:white;
 	   padding: 20px;
 }
-
+.p6{
+	border:6px dotted;
+	margin:100px;
+	background:blue;
+	padding: 20px;
+}
 
 .clearfix {
 }
