@@ -41,7 +41,10 @@ $( document ).ready(function() {
 					//background-size: 490px;
 				}
 				else {
-		            $("<img/>").attr("src", item.media.m).prependTo("#results");
+		            var img=$("<img/>").attr("src", item.media.m).prependTo("#results");
+					var rand=1+Math.floor(Math.random() *3);
+		 			img.css('width',100*rand+'px');
+		
 				}
 	            
 				if ( i == 11)return false;
