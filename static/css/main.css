@@ -23,6 +23,7 @@
 	font-size:37px;
 	line-height:1.5em;
 	font-family:ariel;
+	padding:20px;
 }
 
 .t4{
@@ -31,6 +32,8 @@
 	text-decoration:italic;
 	font-size:42px;
 	line-height:1.5em;
+	padding:10px;
+	
 	
 }
 .t5{
@@ -49,6 +52,25 @@
 	text-transform:uppercase;
 }
 
+.p1{
+	border:3px red;
+	margin:20px;
+	   padding: 50px;
+}
+
+.p3{
+	border:3px grey;
+	margin:40px;
+	background:blue;
+	   padding: 70px;
+}
+.p3{
+	border:3px black;
+	margin:10px;
+	background:black;
+	color:white;
+	   padding: 20px;
+}
 
 
 .clearfix {

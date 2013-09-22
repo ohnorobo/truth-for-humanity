@@ -33,15 +33,22 @@ $( document ).ready(function() {
 		if(item.contains(searchString))
 			{
 	 		randCSS=tCSS[Math.floor(Math.random() * tCSS.length)];	
-			console.log(item);
+			//console.log(item);
 			str=$("body").html().replace(item,"<span class='"+randCSS+"'>"+item+"</span>");
-			$( "body:last" ).html( str );
+			$( "body" ).html( str );
 		}
+		if(i>=5)return;
 	});
 
 
 
 
+	//highlight random paragraph
+
+	var pCSS=['p1','p2','p3'];
+	var random = Math.floor(Math.random() * 3 );
+	randCSS=pCSS[Math.floor(Math.random() * pCSS.length)];	
+	$("p").eq(random).attr("class", randCSS);
 
 
 	// randCSS=tCSS[Math.floor(Math.random() * tCSS.length)];	
@@ -83,9 +90,11 @@ $( document ).ready(function() {
 	
 				//background-size: 490px;
 			}
+			
+			//set paragraph image
 			else if ( i == 2){
-				var img=$("<img/>").attr("src", item.media.m).prependTo("p:first");
-								
+				var img=$("<img/>").attr("src", item.media.m).prependTo("p:second");
+				img.css('width',200+'px');
 			}
 			else {
 		
