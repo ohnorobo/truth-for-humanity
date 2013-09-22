@@ -28,15 +28,17 @@ def generate_html(term):
   f.close()
   return path
 
+@app.route("/")
+def main():
+    return flask.render_template("index.html");
+
 @app.route("/favicon.ico")
 def favicon():
     return "";
 
-
 @app.route("/<term>")
-def main(term):
+def term(term):
     page = generate_page(term);
-
     return flask.render_template(page);
 
 
