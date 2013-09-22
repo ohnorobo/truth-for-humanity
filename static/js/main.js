@@ -38,7 +38,7 @@ $( document ).ready(function() {
 					$('body').css({'background-image': 'url('+ item.media.m + ')'});
 					$('body').css({'background-image': 'url('+ item.media.m + ')'});
 					
-					background-size: 490px;
+					//background-size: 490px;
 				}
 				else {
 		            $("<img/>").attr("src", item.media.m).prependTo("#results");
