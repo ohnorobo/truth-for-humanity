@@ -24,6 +24,7 @@
 	line-height:1.5em;
 	font-family:ariel;
 	padding:20px;
+	text-decoration:underline;
 }
 
 .t4{
@@ -42,6 +43,8 @@
 	font-weight:bold;
 	font-size:23px;
 	line-height:2em;
+	text-decoration:underline;
+	
 }
 .t6{
 	color:purple; 
@@ -51,6 +54,44 @@
 	line-height:2em;
 	text-transform:uppercase;
 }
+
+.t7{
+	color:black; 
+	font-weight:bold;
+	font-size:23px;
+	line-height:1em;
+	text-decoration:underline;
+	
+}
+
+.t8{
+	color:yellow;
+	background-color:black;
+	 
+	font-weight:bold;
+	font-size:23px;
+	line-height:1em;
+	text-decoration:underline;
+	
+}
+.t9{
+	color:white;
+	background-color:black;
+	font-weight:bold;
+	font-size:18px;
+	line-height:1em;
+	text-decoration:underline;
+}
+.t10{
+	color:red;
+	background-color:black;
+	font-weight:italic;
+	font-size:16px;
+	line-height:1em;
+	text-decoration:underline;
+}
+
+
 
 .p1{
 	border:3px red;
@@ -70,6 +111,7 @@
 	background:black;
 	color:white;
 	   padding: 20px;
+	font-weight:bold;
 }
 .p4{
 	border:3px inset;
@@ -77,20 +119,48 @@
 	background:blue;
 	color:white;
 	   padding: 20px;
+	text-decoration:underline;
+	font-weight:bold;
+	
 }
 .p5{
-	border:6px groove;
+	border:6px groove red;
 	margin:10px;
 	background:cyan;
 	color:white;
 	   padding: 20px;
 }
 .p6{
-	border:6px dotted;
+	border:6px solid red;
 	margin:100px;
 	background:blue;
 	padding: 20px;
 }
+
+.p7{
+	border:2px dotted black;
+	margin:100px;
+	background:orange;
+	padding: 20px;
+}
+
+
+.p8{
+	border:3px dotted red;
+	margin:100px;
+	background:grey;
+	padding: 20px;
+}
+
+
+
+.p9{
+	border:2px solid black;
+	margin:100px;
+	background:grey;
+	padding: 20px;
+}
+
 
 .clearfix {
 }
