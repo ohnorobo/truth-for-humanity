@@ -65,7 +65,21 @@
 	   padding: 70px;
 }
 .p3{
-	border:3px black;
+	border:6px outset ;
+	margin:10px;
+	background:black;
+	color:white;
+	   padding: 20px;
+}
+.p4{
+	border:3px inset;
+	margin:10px;
+	background:black;
+	color:white;
+	   padding: 20px;
+}
+.p5{
+	border:6px groove;
 	margin:10px;
 	background:black;
 	color:white;

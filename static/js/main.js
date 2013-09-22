@@ -27,17 +27,16 @@ $( document ).ready(function() {
 	//highlight sentences
 	cleanText = str.replace(/<\/?[^>]+(>|$)/g, "");
 	var sentences=cleanText.split(".");
-	
-	
 	$.each(sentences, function(i,item){
+		if(i>=5)return;
+		
 		if(item.contains(searchString))
-			{
+		{
 	 		randCSS=tCSS[Math.floor(Math.random() * tCSS.length)];	
 			//console.log(item);
 			str=$("body").html().replace(item,"<span class='"+randCSS+"'>"+item+"</span>");
 			$( "body" ).html( str );
 		}
-		if(i>=5)return;
 	});
 
 
@@ -93,8 +92,9 @@ $( document ).ready(function() {
 			
 			//set paragraph image
 			else if ( i == 2){
-				var img=$("<img/>").attr("src", item.media.m).prependTo("p:second");
-				img.css('width',200+'px');
+				var img=$("<img/>").attr("src", item.media.m).prependTo("p:first");
+				img.css('width',400+'px');
+				img.css('padding','100px');
 			}
 			else {
 		
