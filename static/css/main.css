@@ -2,11 +2,15 @@
 	color:sienna; 
 	background-color:yellow;
 	font-size:24px;
+	line-height:1.9em;
+	
 }
 .t2{
 	color:red; 
 	background-color:green;
 	font-size:32px;
+	line-height:1.5em;
+	
 }
 
 
@@ -16,6 +20,21 @@
 	text-decoration:italic;
 }
 
+.t4{
+	color:blue; 
+	background-color:white;
+	text-decoration:italic;
+	font-size:32px;
+	line-height:1.5em;
+	
+}
+.t5{
+	color:green; 
+	background-color:pink;
+	font-weight:bold;
+	font-size:43px;
+	line-height:2em;
+}
 
 
 

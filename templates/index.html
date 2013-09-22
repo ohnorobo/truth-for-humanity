@@ -1,10 +1,20 @@
-<HTML>
-<HEAD>
-</HEAD>
-<BODY>
-<P>
-<FORM name="something" action="#">
-<INPUT type="text" name="url" value="" onSubmit="goToPage(this.value)">
-<INPUT type="submit" value="GO">
-</FORM>
-</BODY></HTML>
+
+
+<head>
+<link href="../static/css/main.css" type="text/css" rel="stylesheet" />
+ <p title="truth for humanity">TruthForHumanity.com</p> 
+</head>
+
+<div class="container">
+<p>
+<h1>WELCOME YOU!!!</h1>
+<h2>ALL OF HUMANITY TRUTH IS HERE</h2>
+<h3>WHAT DO YOU SEEK TRUTH OF!</h3>
+</p>
+
+<form onsubmit="location.href=document.URL + document.getElementById('myInput').value; return false;">
+  <input type="text" id="myInput" />
+  <input type="submit" value="Search"/>
+</form>
+
+</div>
