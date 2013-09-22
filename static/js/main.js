@@ -21,23 +21,9 @@ $( document ).ready(function() {
 	
 	var randCSS=tCSS[Math.floor(Math.random() * tCSS.length)];	
 	str=$("body").html().replace(searchString,"<span class='"+randCSS+"'>"+searchString+"</span>");
-	$( "body:last" ).html( str );
+	$( "body" ).html( str );
 	
 
-	//highlight sentences
-	cleanText = str.replace(/<\/?[^>]+(>|$)/g, "");
-	var sentences=cleanText.split(".");
-	$.each(sentences, function(i,item){
-		if(i>=10)return;
-		
-		if(item.contains(searchString))
-		{
-	 		randCSS=tCSS[Math.floor(Math.random() * tCSS.length)];	
-			//console.log(item);
-			str=$("body").html().replace(item,"<span class='"+randCSS+"'>"+item+"</span>");
-			$( "body" ).html( str );
-		}
-	});
 
 
 
@@ -64,6 +50,27 @@ $( document ).ready(function() {
 	
 	
 	
+	//highlight sentences
+ 	str=$("body").text();
+
+	cleanText = str.replace(/<\/?[^>]+(>|$)/g, "");
+	var sentences=cleanText.split(".");
+	$.each(sentences, function(i,item){
+		
+		if(i>=20)return;
+		
+		if(item.contains(unescape(searchString)))
+		{
+			console.log(item);
+		
+	 		randCSS=tCSS[Math.floor(Math.random() * tCSS.length)];	
+			console.log(item);
+			str=$("body").html().replace(item,"<span class='"+randCSS+"'>"+item+"</span>");
+			$( "body" ).html( str );
+		}
+	});
+
+
 	
 	
 	
@@ -111,7 +118,7 @@ $( document ).ready(function() {
 				img.css('float','right');
 				
 				randCSS=pCSS[Math.floor(Math.random() * pCSS.length)];	
-				item.parent().attr("class", randCSS);
+				img.parent().attr("class", randCSS);
 								
 			}
 			
@@ -160,6 +167,7 @@ $( document ).ready(function() {
 	
 	
 	
+
 	
 
 
