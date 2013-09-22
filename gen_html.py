@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 #http://stackoverflow.com/questions/2795134/how-to-generate-random-html-document
 
-import random, string, operator, codecs, sys, glob
+import random, string, operator, codecs, sys, glob, traceback
 sys.setrecursionlimit(10000)
 
 
@@ -24,10 +24,11 @@ def RandomHtml(term):
 def RandomBody(term):
     b =  RandomSection(term)
     for _ in xrange(random.choice([10, 20, 30])):
-        b += RandomSection(term)
+        for x in range((random.choice([1,1,1,2,3]))): #sometimes columns
+            b += RandomSection(term, x)
     return b
 
-def RandomSection(term):
+def RandomSection(term, cols=1):
     starttag, endtag = getTag()
     b = ""
     b += starttag
@@ -35,10 +36,10 @@ def RandomSection(term):
     b += endtag
     sentences = random.randrange(5, 20)
     for _ in xrange(sentences):
-         b += RandomElement(term)
+        b += RandomElement(term)
     return b
 
-def getTag():
+def getTag(cols=1):
   tags = [("<h1>","</h1>"),
           ("<h1>","</h1>"),
           ("<h1>","</h1>"),
@@ -62,7 +63,12 @@ def getTag():
           ("<i>","</i>"),
           ]
 
-  return random.choice(tags)
+  stag, etag = random.choice(tags)
+
+  if (cols != 1 and not "id" in stag):
+      stag = stag[:-2] + "id=column" + str(cols) + " " + stag[-1:]
+
+  return stag, etag
 
 def spanTagWithId():
   tags = [("<span id=\"font1\">","</span>"),
@@ -119,12 +125,21 @@ def RandomSentences(term, count):
     return b
 
 def RandomSentence(term):
+
+    try:
+        if (random.randint(0,2) == 0):
+            term = getSynonym(term)
+    except Exception as e:
+        "lol don't care"
+        print "error getting lemma"
+        print e
+        #traceback.print_exc()
+
     sent = SampleSentence()
     sent = sent.replace(u"[BLANK]", term)
-
     if (random.randint(0, 4) == 0): #special font id
-      pstart, pend = spanTagWithId()
-      sent = pstart + sent + pend
+        pstart, pend = spanTagWithId()
+        sent = pstart + sent + pend
 
     return sent
 
@@ -141,15 +156,30 @@ def SampleSentence():
   line = random.choice(lines)
   return line + " "
 
+from nltk.corpus import wordnet as wn
+from string import capwords
+def getSynonym(term):
+  if ("the " in term.lower()):
+      print "** searching for: " + term
+      stopwords, term = term.split(" ", 1)
+
+  print "** searching for: " + term
+  synset = random.choice(wn.synsets(term.lower(), pos=wn.NOUN))
+  if (random.randint(0, 1) == 0):
+      new = random.choice(synset.hypernyms())
+  else:
+      new = random.choice(synset.hyponyms())
+  lemma = random.choice(new.lemma_names)
+  lemma = lemma.replace("_", " ")
+
+  if (stopwords):
+    lemma = stopwords + " " + lemma
+
+  lemma = capwords(lemma)
+  print "lemma " + lemma
+  return lemma
 
 
-def getString(generator):
-    print "getting str of "
-    print generator
-    if isinstance(generator, str):
-        return generator
-    else:
-        return reduce(operator.add, [getString(item) for item in generator], "")
 
 def generate(term):
   return RandomHtml(term)
