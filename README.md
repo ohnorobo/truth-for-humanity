@@ -1,13 +1,13 @@
-truth-for-humanity
+Truth For Humanity
 ==================
 
 generate the hidden truth about any topic
 
 
-Hackathon Project for [Comedy Hack Day](https://www.hackerleague.org/hackathons/comedy-hack-day-at-the-mit-media-lab/hacks/truth-for-humanity)
+First place hackathon project for [Comedy Hack Day](http://www.cultivatedwit.com/truth-for-humanity-revealed-at-comedy-hack-day/)
 
 
-Live at [http://truth-for-humanity.herokuapp.com/](http://truth-for-humanity.herokuapp.com/)
+Live at [http://www.truthforhumanity.com/](http://www.truthforhumanity.com)
 
 Contributors
 * Ben Apple
