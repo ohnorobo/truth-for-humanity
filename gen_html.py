@@ -100,7 +100,6 @@ def socialButtons():
     <a class="addthis_button_compact"></a>
     <a class="addthis_counter addthis_bubble_style"></a>
     </div>
-    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=xa-523f1f6e47ff1123"></script>
     <!-- AddThis Button END -->'''
 
 def RandomImage(term):
@@ -156,15 +155,19 @@ def SampleSentence():
   line = random.choice(lines)
   return line + " "
 
-from nltk.corpus import wordnet as wn
+import nltk
+nltk.data.path.append('./nltk_data/')
+
 from string import capwords
 def getSynonym(term):
+  stopwords = None
   if ("the " in term.lower()):
       print "** searching for: " + term
       stopwords, term = term.split(" ", 1)
 
   print "** searching for: " + term
-  synset = random.choice(wn.synsets(term.lower(), pos=wn.NOUN))
+  synset = random.choice(nltk.corpus.wordnet.synsets(term.lower(), 
+                         pos=nltk.corpus.wordnet.NOUN))
   if (random.randint(0, 1) == 0):
       new = random.choice(synset.hypernyms())
   else:
