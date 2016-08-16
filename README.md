@@ -7,7 +7,7 @@ generate the hidden truth about any topic
 First place hackathon project for [Comedy Hack Day](http://www.cultivatedwit.com/truth-for-humanity-revealed-at-comedy-hack-day/)
 
 
-Live at [http://www.truthforhumanity.com/](http://www.truthforhumanity.com)
+Live at [http://truth-for-humanity.herokuapp.com/](http://truth-for-humanity.herokuapp.com/)
 
 Contributors
 * Ben Apple
