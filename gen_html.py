@@ -23,7 +23,7 @@ def RandomHtml(term):
 
 def RandomBody(term):
     b =  RandomSection(term)
-    for _ in xrange(random.choice([10, 20, 30])):
+    for _ in range(random.choice([10, 20, 30])):
         for x in range((random.choice([1,1,1,2,3]))): #sometimes columns
             b += RandomSection(term, x)
     return b
@@ -35,7 +35,7 @@ def RandomSection(term, cols=1):
     b += RandomElement(term)
     b += endtag
     sentences = random.randrange(5, 20)
-    for _ in xrange(sentences):
+    for _ in range(sentences):
         b += RandomElement(term)
     return b
 
@@ -119,7 +119,7 @@ def RandomImage(term):
 
 def RandomSentences(term, count):
     b = ""
-    for _ in xrange(count):
+    for _ in range(count):
         b += RandomSentence(term)
     return b
 
@@ -130,8 +130,8 @@ def RandomSentence(term):
             term = getSynonym(term)
     except Exception as e:
         "lol don't care"
-        print "error getting lemma"
-        print e
+        print("error getting lemma")
+        print(e)
         #traceback.print_exc()
 
     sent = SampleSentence()
@@ -162,10 +162,10 @@ from string import capwords
 def getSynonym(term):
   stopwords = None
   if ("the " in term.lower()):
-      print "** searching for: " + term
+      print("** searching for: " + term)
       stopwords, term = term.split(" ", 1)
 
-  print "** searching for: " + term
+  print("** searching for: " + term)
   synset = random.choice(nltk.corpus.wordnet.synsets(term.lower(), 
                          pos=nltk.corpus.wordnet.NOUN))
   if (random.randint(0, 1) == 0):
@@ -179,7 +179,7 @@ def getSynonym(term):
     lemma = stopwords + " " + lemma
 
   lemma = capwords(lemma)
-  print "lemma " + lemma
+  print("lemma " + lemma)
   return lemma
 
 
