@@ -11,9 +11,9 @@ def RandomHtml(term):
                <link href="../static/css/main.css" rel="stylesheet">
                <link href="../static/css/webfonts.css" rel="stylesheet">
 
-               <link href='http://fonts.googleapis.com/css?family=Londrina+Outline' rel='stylesheet' type='text/css'>
-               <link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
-               <link href='http://fonts.googleapis.com/css?family=Caesar+Dressing' rel='stylesheet' type='text/css'>
+               <link href='https://fonts.googleapis.com/css?family=Londrina+Outline' rel='stylesheet' type='text/css'>
+               <link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+               <link href='https://fonts.googleapis.com/css?family=Caesar+Dressing' rel='stylesheet' type='text/css'>
 
                <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" ></script>
                <script src="../static/js/main.js"></script>

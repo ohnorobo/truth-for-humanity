@@ -92,7 +92,7 @@ $( document ).ready(function() {
 			//set paragraph image
 		var	randomFirst=Math.round(Math.random()*10);
 	
-	     $.getJSON("http://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?",
+	     $.getJSON("https://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?",
 	     {
 			       tags: unescape(searchString),
 			       tagmode: "all",
